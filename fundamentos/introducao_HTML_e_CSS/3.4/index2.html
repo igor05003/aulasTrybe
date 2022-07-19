@@ -12,9 +12,6 @@
             padding: none;
         }
 
-        .title h1 {
-            display: inline-block;
-        }
 
         .header li {
             display: inline-block;
@@ -74,18 +71,18 @@
     </style>
 </head>
 <body>
-    <header class="title">
+    <header id="title">
         <h1>Soco a 80km/h: Conheça o Stomatopoda.</h1>
     </header>
     <nav class="header">
         <ul>
-            <li><a href="">Página Inicial</a></li>
-            <li><a href="">Sobre</a></li>
-            <li><a href="">Contato</a></li>
+            <li><a href="#title">Página Inicial</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
         </ul>
     </nav>
     <main>
-        <article>
+        <article id="about">
             <h2>Fatos sobre o Stomatopoda</h2>
             <section>
                 <h3>Informações gerais</h3>
@@ -138,7 +135,7 @@
             </section>
         </article>
     </main>
-    <footer>
+    <footer id="contact">
         <p>Conteúdo compilado por <b>Igor Carvalho</b>, 2022</p>
     </footer>
 </body>
