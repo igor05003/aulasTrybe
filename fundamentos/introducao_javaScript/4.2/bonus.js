@@ -38,12 +38,11 @@ for (let index = 1; index < numbers.length; index += 1) {
     if (j < index) {
         multNumbers.push(numbers[j] * numbers[index]);
         j += 1
-    } 
+    }
 }
 
-if (j === numbers.length) {
-    multNumbers.push(numbers[j] * 2);
-}
+let lastNumber = numbers[numbers.length - 1];
+multNumbers.push(numbers[lastNumber] * 2);
 
 console.log("array numbers");
 console.log(numbers);
