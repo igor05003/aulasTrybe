@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+    
+    <style>
+      main, section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header> 
+      <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    </header>    
+    <main class="main-content">
+      <section class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </section>
+    </main>
+    <script>
+        // 1.
+
+        function phraseMaker() {
+            let phrase = document.getElementsByTagName("p");
+            phrase[1].innerText = "Daqui a dois anos me vejo trabalhando em alguma empresa na area de tecnologia, e morando em alguma cidade diferente.";
+        }
+        phraseMaker();
+
+        // 2.
+        function colorChanger() {
+            let focus = document.getElementsByClassName("main-content");
+            focus[0].style.backgroundColor = "rgb(76,164,109)"
+        }
+        colorChanger();
+
+        //3.
+        function colorChanger2() {
+            let newColor = document.getElementsByClassName("center-content");
+            newColor[0].style.backgroundColor = "white";
+        }
+        colorChanger2();
+
+        // 4.
+        function textChanger() {
+            let newText = document.getElementsByTagName("h1");
+            newText[0].innerText = "Exercício 5.1 - JavaScript";
+        }
+        textChanger();
+
+        // 5.
+        function textCase() {
+            let phrase2 = document.getElementsByTagName("p");
+            phrase2[1].style.textTransform = "uppercase"
+        }
+        textCase()
+
+        // 6.
+        function consoleP() {
+            let allTexts = document.getElementsByTagName("p");
+            for (let index = 0; index < allTexts.length; index += 1) {
+                console.log(allTexts[index]);
+            }
+        }
+        consoleP()
+    </script>
+  </body>
+</html>
