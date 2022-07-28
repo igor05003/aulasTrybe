@@ -66,6 +66,68 @@
         //2.
         let mainTag = document.createElement('main');
         page.appendChild(mainTag);
+
+        //3.
+        let sectionTag = document.createElement('section');
+        sectionTag.className = 'center-content';
+        mainTag.appendChild(sectionTag);
+
+        //4.
+        let sectionText = document.createElement('p');
+        sectionText.innerText = 'Exercícios do dia 5.2';
+        sectionTag.appendChild(sectionText);
+
+        //5.
+        let sectionTag2 = document.createElement('section');
+        sectionTag2.className = 'left-content';
+        mainTag.appendChild(sectionTag2);
+
+        //6.
+        let sectionTag3 = document.createElement('section');
+        sectionTag3.className = 'right-content';
+        mainTag.appendChild(sectionTag3);
+
+        //7. 
+        let img = document.createElement('img');
+        img.className = 'small-image';
+        img.src = 'https://picsum.photos/200';
+        sectionTag2.appendChild(img);
+
+        //8.
+        let list = document.createElement('ul');
+        sectionTag3.appendChild(list);
+        let item = null;
+        
+        for (let index = 1; index <= 10; index += 1) {
+            item = index
+            
+            let listItem = document.createElement('li');
+            listItem.innerText = item;
+            list.appendChild(listItem);
+        }
+
+        //9.
+        for (let index = 0; index < 3; index += 1) {
+            let h3Tag = document.createElement('h3');
+            //2.
+            h3Tag.className = 'description';
+
+            mainTag.appendChild(h3Tag);
+        }
+
+        //---------------------------------
+        //1.
+        texto.className = 'title';
+
+        //3.
+        mainTag.removeChild(sectionTag2);
+
+        //4.
+        sectionTag3.style.marginRight = 'auto';
+
+        //5.
+        sectionTag.style.backgroundColor = 'green';
+
       
     </script>
   </body>
