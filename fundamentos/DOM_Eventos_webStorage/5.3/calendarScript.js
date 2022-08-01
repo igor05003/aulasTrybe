@@ -41,9 +41,27 @@ function createDaysOfTheWeek() {
 
   function createButtom(feriados) {
     let button = document.createElement('button');
-    let buttonDiv = document.querySelector('buttons-container');
-    button.setAttribute('id', 'btn-holiday');
+    button.innerHTML = 'Feriados';
+    let buttonDiv = document.querySelector('.buttons-container');
+    button.id = 'btn-holiday' ;
     buttonDiv.appendChild(button);
+
+    button.addEventListener('click', function () {
+      let holidayEvent = document.querySelectorAll('.holiday');
+      for (let index = 0; index < holidayEvent.length; index += 1) {
+        if (holidayEvent[index].style.backgroundColor = 'green') {
+          console.log('oi');
+          holidayEvent[index].style.backgroundColor = 'rgb(238,238,238)'
+        } else if (holidayEvent[index].style.backgroundColor = 'rgb(238,238,238)') {
+          console.log('ola');
+          holidayEvent[index].style.backgroundColor = 'green';
+        }
+      }
+    });
   }
-  
   createButtom();
+
+
+
+  
+
