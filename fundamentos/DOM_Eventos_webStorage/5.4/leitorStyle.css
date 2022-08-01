@@ -1,0 +1,26 @@
+body {
+    background-color: white;
+}
+
+#header-text {
+    text-align: center;
+}
+
+.text p {
+    margin-left: 20%;
+    width: 60%;
+    text-align: center;
+    display: inline-block;
+}
+
+.button-section {
+    margin-left: 20%;
+}
+
+.button {
+    margin-left: 100px;
+}
+
+#text {
+    font-size: 15px;
+}
