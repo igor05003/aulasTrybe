@@ -24,7 +24,6 @@ function darkThemeActivation() {
     localStorage.setItem('headerTextColor');
     localStorage.setItem('footerTextColor');
     localStorage.setItem('bodyColor');
-
 }
 
 
