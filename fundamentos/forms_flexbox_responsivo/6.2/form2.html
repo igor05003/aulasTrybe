@@ -4,59 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="formStyle.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>TrybeTrip</title>
 </head>
 <body>
-    <header>
-        <h1>Header da página</h1>
+    <header class="text-center">
+        <h1 class="display-4">Header da página</h1>
     </header>
     <form action="GET" id="form">
-        <main>
-            <div id="name">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" maxlength="40" minlength="10">
+        <main class="">
+            <div id="name" class="mx-4">
+                <label class="form-label" for="name">Nome:</label>
+                <input class="form-control" type="text" id="name" maxlength="40" minlength="10">
                 <br>
             </div>
-            <div id="emailDiv">
-                <label for="email">Email:</label>
-                <input type="email" id="email" maxlength="50" minlength="10">
+            <div id="emailDiv" class="mb-3 mx-4">
+                <label class="form-label" for="email">Email:</label>
+                <input class="form-control" type="email" id="email" maxlength="50" minlength="10">
             </div>
-            <div id="favorite">
-                <label for="cidade">
-                    <input type="radio" id="cidade" name="lugar-preferido" value="cidade">Cidade
+            <div id="favorite" class="text-center mb-3">
+                <label for="cidade" class="form-check-label">
+                    <input class="form-check-input" type="radio" id="cidade" name="lugar-preferido" value="cidade"> Cidade
                 </label>
-                <label for="campo">
-                    <input type="radio" id="campo" name="lugar-preferido" value="campo">Campo
+                <label for="campo" class="form-check-label">
+                    <input class="form-check-input" type="radio" id="campo" name="lugar-preferido" value="campo"> Campo
                 </label>
-                <label for="praia">
-                    <input type="radio" id="praia" name="lugar-preferido" value="praia">Praia
+                <label for="praia" class="form-check-label">
+                    <input class="form-check-input" type="radio" id="praia" name="lugar-preferido" value="praia"> Praia
                 </label>
-                <label for="montanha">
-                    <input type="radio" id="montanha" name="lugar-preferido" value="montanha">Montanha
-                </label>
-            </div>
-            <div id="textDiv">
-                <h3>Espaço para digitar a resposta:</h3>
-                <textarea name="why-win" id="text" cols="30" rows="10" maxlength="500"></textarea>
-            </div>
-            <div id="date">
-                <label for="day">Data:
-                    <input type="date" id="day">
+                <label for="montanha" class="form-check-label">
+                    <input class="form-check-input" type="radio" id="montanha" name="lugar-preferido" value="montanha"> Montanha
                 </label>
             </div>
-            <div id="permission">
-                <label for="concordo1">
-                    <input type="checkbox" name="concordo1" id="concordo1"> Concordo 1
+            <div id="textDiv" class="text-center mb-3">
+                <h3 class="lead">Espaço para digitar a resposta:</h3>
+                <textarea class="form-control" name="why-win" id="text" maxlength="500"></textarea>
+            </div>
+            <div id="date" class="text-center">
+                <label for="day" class="form-label">Data:
+                    <input type="date" id="day" class="form-control">
+                </label>
+            </div>
+            <div id="permission" class="text-center mb-5">
+                <label for="concordo1" class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="concordo1" id="concordo1"> Concordo 1
                 </label>
                 <br>
-                <label for="concordo2">
-                    <input type="checkbox" name="concordo2" id="concordo2"> Concordo 2
+                <label for="concordo2" class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="concordo2" id="concordo2"> Concordo 2
                 </label>
             </div>
-            <div id="buttonDiv">
-                <button type="submit" id="send">Enviar</button>
-                <button type="reset" id="delete">Apagar</button>
+            <div id="buttonDiv" class="mx-4 text-center mb-3">
+                <button class="btn btn-primary" type="submit" id="send">Enviar</button>
+                <button type="reset" class="btn btn-danger " id="delete">Apagar</button>
             </div>
         </main>
     </form>
