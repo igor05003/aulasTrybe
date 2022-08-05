@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formStyle.css">
+    <title>TrybeTrip</title>
+</head>
+<body>
+    <header>
+        <h1>Header da página</h1>
+    </header>
+    <form action="GET" id="form">
+        <main>
+            <div id="name">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" maxlength="40" minlength="10">
+                <br>
+            </div>
+            <div id="emailDiv">
+                <label for="email">Email:</label>
+                <input type="email" id="email" maxlength="50" minlength="10">
+            </div>
+            <div id="favorite">
+                <label for="cidade">
+                    <input type="radio" id="cidade" name="lugar-preferido" value="cidade">Cidade
+                </label>
+                <label for="campo">
+                    <input type="radio" id="campo" name="lugar-preferido" value="campo">Campo
+                </label>
+                <label for="praia">
+                    <input type="radio" id="praia" name="lugar-preferido" value="praia">Praia
+                </label>
+                <label for="montanha">
+                    <input type="radio" id="montanha" name="lugar-preferido" value="montanha">Montanha
+                </label>
+            </div>
+            <div id="textDiv">
+                <h3>Espaço para digitar a resposta:</h3>
+                <textarea name="why-win" id="text" cols="30" rows="10" maxlength="500"></textarea>
+            </div>
+            <div id="date">
+                <label for="day">Data:
+                    <input type="date" id="day">
+                </label>
+            </div>
+            <div id="permission">
+                <label for="concordo1">
+                    <input type="checkbox" name="concordo1" id="concordo1"> Concordo 1
+                </label>
+                <br>
+                <label for="concordo2">
+                    <input type="checkbox" name="concordo2" id="concordo2"> Concordo 2
+                </label>
+            </div>
+            <div id="buttonDiv">
+                <button type="submit" id="send">Enviar</button>
+                <button type="reset" id="delete">Apagar</button>
+            </div>
+        </main>
+    </form>
+    
+</body>
+</html>
