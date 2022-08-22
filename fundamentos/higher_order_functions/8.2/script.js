@@ -14,3 +14,4 @@ const findDivisibleBy3And5 = (number) => (number % 3 === 0 && number % 5 === 0);
 numbers.find(findDivisibleBy3And5);
 
 console.log(numbers.find(findDivisibleBy3And5));
+
