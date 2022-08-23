@@ -69,3 +69,47 @@ function newArray(array) {
 }
 
 console.log(newArray(books));
+
+console.log('Exercício 2:');
+function ageArray(array) {
+  return array.map((obj) => {
+    const newObj = {
+      age: (obj.releaseYear - obj.author.birthYear),
+      author: obj.author.name, 
+    }
+    return newObj;
+  }).sort((obj1, obj2) => obj1.age - obj2.age);
+}
+console.log(ageArray(books));
+
+console.log('Exercicio 3:');
+function genArray(array) {
+  return array.filter( (book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia'
+  )
+}
+
+console.log(genArray(books));
+
+console.log('Exercicio 4:');
+function dateFilter(array) {
+  return array.filter((book) => {
+    return book.releaseYear < (2022 - 60);
+  }).sort((obj1, obj2) => obj1.releaseYear - obj2.releaseYear)
+}
+
+console.log(dateFilter(books));
+
+console.log('Exercício 5:');
+function nameArray(array) {
+  return array.filter((obj) => obj.genre === 'Ficção Científica' || obj.genre === 'Fantasia').map((obj) => obj.author.name);
+}
+
+console.log(nameArray(books));
+
+console.log('Exercicio 6:');
+function bookNameArray(array) {
+  return array.filter((book) => {
+    return book.releaseYear < (2022 - 60);
+    }).map((obj) => obj.name)
+}
+console.log(bookNameArray(books));
