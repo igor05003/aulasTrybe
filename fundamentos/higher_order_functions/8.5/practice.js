@@ -77,3 +77,11 @@ const [n1, n2, n3] = myList;
 const swap = (array) => array = [n3, n2, n1];
 
 console.log(swap(myList));
+
+console.log('Exercício 6:')
+const palio = ['Palio', 'Fiat', 2019];
+const shelbyCobra = ['Shelby Cobra', 'Ford', 1963];
+const chiron = ['Chiron', 'Bugatti', 2016];
+
+const toObj = ([carName, brand, year]) => ({carName, brand, year});
+console.log(toObj(palio));
