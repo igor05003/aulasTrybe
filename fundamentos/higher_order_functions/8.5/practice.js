@@ -111,3 +111,10 @@ const shipLength = ({ name, length, measurementUnit}) => `${name} is ${length} $
 console.log(shipLength(ships[0]));
 console.log(shipLength(ships[1]));
 console.log(shipLength(ships[2]));
+
+console.log('Exercício 8');
+const greet = (name, text = 'Hi') => `${text} ${name}`;
+
+console.log(greet('John'));
+console.log(greet('John', 'Good morning'));
+console.log(greet('Isabela', 'Oi'));
