@@ -85,3 +85,29 @@ const chiron = ['Chiron', 'Bugatti', 2016];
 
 const toObj = ([carName, brand, year]) => ({carName, brand, year});
 console.log(toObj(palio));
+
+console.log('Exercício 7:');
+const ships = [
+    {
+      name: 'Titanic',
+      length: 269.1,
+      measurementUnit: 'meters',
+    },
+    {
+      name: 'Queen Mary 2',
+      length: 1132,
+      measurementUnit: 'feet',
+    },
+    {
+      name: 'Yamato',
+      length: 256,
+      measurementUnit: 'meters',
+    },
+];
+
+const shipLength = ({ name, length, measurementUnit}) => `${name} is ${length} ${measurementUnit} long`;
+
+  
+console.log(shipLength(ships[0]));
+console.log(shipLength(ships[1]));
+console.log(shipLength(ships[2]));
