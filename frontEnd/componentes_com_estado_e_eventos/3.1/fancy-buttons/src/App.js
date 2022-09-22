@@ -5,9 +5,7 @@ import Button from './components/button';
 function App() {
   return (
     <>
-      <Button headline="click me" print="clicked" />
-      <Button headline="hi" print="hello" />
-      <Button headline="How are u?" print="im good" />    
+      <Button />    
     </>
   );
 }
