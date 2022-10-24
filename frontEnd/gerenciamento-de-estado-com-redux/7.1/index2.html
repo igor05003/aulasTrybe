@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Trybe</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.js"></script>
+    <style>
+        body {
+            color: white;
+            background-color: #333;
+            font-family: sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Minha Aplicação</h1>
+        <p>Status: Você está <span id="status">Offline</span></p>
+        <button id="toggle-theme">Light Mode</button>
+        <button id="toggle-status">Ficar Online</button>
+    </div>
+    <script>
+        const INITIAL_STATE = {
+            theme: 'dark',
+            status: 'offline',
+        };
+
+        const themeAction = { type: 'CHANGE-THEME' };
+        const statusAction = { type: 'CHANGE-STATUS' };
+
+        const reducer = (state = INITIAL_STATE, action) => {
+            switch (action.type) {
+                case 'CHANGE-THEME':
+                    return {
+                        theme: state.theme === 'dark' ? 'light' : 'dark',
+                        ...state,
+                    }
+                case 'CHANGE-STATUS':
+                    return {
+                        ...state,
+                        status: state.status === 'offline' ? 'online' : 'offline',
+                    }
+                default:
+                    return state;
+            }
+        };
+
+        const store = Redux.createStore(reducer);
+
+        const themeButton = document.getElementById('toggle-theme');
+        const statusButton = document.getElementById('toggle-status');
+
+        themeButton.addEventListener('click', () => {
+            store.dispatch(themeAction);
+            console.log(store.getState())
+        });
+
+        statusButton.addEventListener('click', () => {
+            store.dispatch(statusAction);
+        });
+
+        store.subscribe(() => {
+            const { theme, status } = store.getState();
+            const body = document.querySelector('body');
+            const background = theme === 'dark' ? 'black' : 'white';
+            const font = theme === 'dark' ? 'white' : 'black';
+            const btnHtml = theme === 'dark' ? 'light' : 'dark';
+            themeButton.innerHTML = `${btnHtml} Mode`
+            console.log(background, font, btnHtml)
+            body.style.backgroundColor = theme === 'dark' ? 'black' : 'white';
+            body.style.color = font;
+            const userStatus = document.querySelector('#status');
+            const statusBtnHtml = status === 'offline' ? 'Online' : 'Offline';
+            statusButton.innerHTML = `Ficar ${statusBtnHtml}`
+            userStatus.innerText = status;
+        })
+    </script>
+</body>
+
+</html>
