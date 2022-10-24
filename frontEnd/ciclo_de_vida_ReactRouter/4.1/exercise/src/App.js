@@ -1,25 +1,42 @@
 import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      loading: true,
+      userData: [],
+    }
+    this.fetchApi = this.fetchApi.bind(this);
+  }
+
+  async fetchApi() {
+    const resp = await fetch('https://api.randomuser.me/');
+    const jsonData = await resp.json();
+    this.setState((previousState) => ({
+      loading: false,
+      userData: [...previousState.userData, ...jsonData.results],
+    }))
+  }
+
+  componentDidMount() {
+    this.fetchApi();
+  }
+
+  render() {
+    const { userData, loading } = this.state;
+    const personObj = userData[0];
+    return (
+      <div>
+        <p>{ `Nome: ${personObj.name.first} ${personObj.name.last}` }</p>
+        <p>{ `Genero: ${personObj.gender}` }</p>
+        <p>{ `Endereço: ${personObj.location.street}` }</p>
+      </div>
+    );
+  }
+    
 }
 
 export default App;
